@@ -1,0 +1,62 @@
+{
+  "name": "@rxtrading/strategy-engine",
+  "version": "0.0.1",
+  "description": "A fast strategy engine that provides signals from powerful JSON rules.",
+  "keywords": [
+    "strategy",
+    "engine",
+    "algorithmic",
+    "backtesting",
+    "indicators",
+    "rules",
+    "signals",
+    "trading"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "c8 mocha ./test",
+    "lint": "standard --verbose",
+    "lint:fix": "standard --verbose --fix"
+  },
+  "author": "srcmayte@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rxtrading/strategy-engine"
+  },
+  "homepage": "https://github.com/rxtrading/strategy-engine",
+  "dependencies": {
+    "bignumber.js": "^9.1.0",
+    "fastest-validator": "^1.15.0",
+    "json-rules-engine": "^6.1.2",
+    "jsonata": "^1.8.6",
+    "lodash": "^4.17.21",
+    "technicalindicators": "^3.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/eslint-parser": "^7.19.1",
+    "c8": "^7.12.0",
+    "ccxt": "^2.0.44",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "chai-datetime": "^1.8.0",
+    "chai-samsam": "^0.0.2",
+    "chance": "^1.1.9",
+    "dirty-chai": "^2.0.1",
+    "mocha": "^10.1.0",
+    "standard": "^17.0.0"
+  },
+  "standard": {
+    "parser": "@babel/eslint-parser",
+    "globals": [
+      "describe",
+      "it",
+      "expect",
+      "before",
+      "beforeEach",
+      "after",
+      "afterEach"
+    ]
+  }
+}
