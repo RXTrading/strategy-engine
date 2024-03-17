@@ -226,7 +226,7 @@ const engine = new StrategyEngine({
       }
       signal: { type: 'OPEN_POSITION' }
     }
-  ]
+  ],
   facts: [
     { 
       id: 'multiply',
@@ -251,7 +251,7 @@ const engine = new StrategyEngine({
             value: 8
           }
         ]
-      }
+      },
       signal: { type: 'OPEN_POSITION' }
     }
   ]
@@ -275,12 +275,12 @@ const engine = new StrategyEngine({
         and: [
           {
             fact: 'positions',
-            path: 'open'
+            path: 'open',
             operator: 'lessThan',
             value: 1
           }
         ]
-      }
+      },
       signal: { type: 'OPEN_POSITION' }
     }
   ]
