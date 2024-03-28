@@ -300,6 +300,44 @@ Facts can be used in any of the following, recursively.
 # Built-in facts
 Strategy engine comes with some built in facts.
 
+## Market base symbol: `market.base` 
+This fact provides the base symbol of `market`.
+
+**Example**
+```json
+{
+  "fact": "market.base",
+  "params": {
+    "market": "BTC/USDT"
+  }
+}
+// Returns BTC
+```
+
+### Properties
+Property | Default  | Description
+-------- | -------- | -----------
+`market` |          | The market to get the base symbol from.
+
+## Market quote symbol: `market.quote` 
+This fact provides the quote symbol of `market`.
+
+**Example**
+```json
+{
+  "fact": "market.quote",
+  "params": {
+    "market": "BTC/USDT"
+  }
+}
+// Returns USDT
+```
+
+### Properties
+Property | Default  | Description
+-------- | -------- | -----------
+`market` |          | The market to get the quote symbol from.
+
 ## Exponential Moving Average: `ta.ema` 
 This fact provides the EMA of `values` for a `period`.
 
