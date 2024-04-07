@@ -170,6 +170,18 @@ describe('StrategyEngine', () => {
         await expect(engine.engine.facts.get('ta.sma').calculationMethod()).to.eventually.eql(true)
       })
 
+      it('has market.base', () => {
+        const engine = new StrategyEngine()
+
+        expect(engine.engine.facts.has('market.base')).to.eql(true)
+      })
+
+      it('has market.quote', () => {
+        const engine = new StrategyEngine()
+
+        expect(engine.engine.facts.has('market.quote')).to.eql(true)
+      })
+
       it('has ta.sma', () => {
         const engine = new StrategyEngine()
 
