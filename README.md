@@ -154,8 +154,12 @@ const rule = {
 }
 ```
 
-### Boolean expressions: `all` and `any`
-Each rule's conditions must have either an `all` or an `any` operator at its root, containing an array of conditions. The `all` operator specifies that all conditions contained within must be truthy for the rule to be considered a `success`. The `any` operator only requires one condition to be truthy for the rule to succeed.
+### Boolean expressions: `all`, `any` and `not`
+Each rule's conditions must have either an `all`, `any` or a `not` operator at its root, containing an array of conditions. 
+
+- The `all` operator specifies that all conditions contained within must be truthy for the rule to be considered a `success`. 
+- The `any` operator only requires one condition to be truthy for the rule to succeed. The 
+- The `not` operator requires a condition.
 
 Boolean conditions can be nested within one another to produce complex boolean expressions.
 
@@ -179,7 +183,8 @@ const nestedBoolean = {
       {
         all: [ /* more conditions */ ]
       }
-    ]
+    ],
+    not: { /* condition */ }
   }
 }
 ```
