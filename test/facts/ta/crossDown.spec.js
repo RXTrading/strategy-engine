@@ -184,7 +184,7 @@ describe('Fact ta.crossDown', () => {
           })
         })
 
-        describe('and amount of values after (and including) cross under is less than confirmationCountMin', () => {
+        describe('and amount of values after cross under is less than confirmationCountMin', () => {
           it('returns false', async () => {
             const result = await fact.value({
               series1: [5, 5, 4, 2, 1],
@@ -196,7 +196,7 @@ describe('Fact ta.crossDown', () => {
           })
         })
 
-        describe('and amount of values after (and including) cross under is greater than or equal to confirmationCountMin', () => {
+        describe('and amount of values after cross under is greater than or equal to confirmationCountMin', () => {
           it('returns true', async () => {
             const result = await fact.value({
               series1: [5, 5, 4, 2, 1],
@@ -222,7 +222,7 @@ describe('Fact ta.crossDown', () => {
           })
         })
 
-        describe('and amount of values after (and including) cross under is greater than confirmationCountMax', () => {
+        describe('and amount of values after cross under is greater than confirmationCountMax', () => {
           it('returns false', async () => {
             const result = await fact.value({
               series1: [5, 4, 3, 2, 1],
@@ -234,7 +234,7 @@ describe('Fact ta.crossDown', () => {
           })
         })
 
-        describe('and amount of values after (and including) cross under is less than or equal to confirmationCountMax', () => {
+        describe('and amount of values after cross under is less than or equal to confirmationCountMax', () => {
           it('returns true', async () => {
             const result = await fact.value({
               series1: [5, 4, 3, 2, 1],
