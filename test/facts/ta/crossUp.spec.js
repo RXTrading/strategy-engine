@@ -181,7 +181,7 @@ describe('Fact ta.crossUp', () => {
           })
         })
 
-        describe('and amount of values after (and including) cross over is less than confirmationCountMin', () => {
+        describe('and amount of values after cross over is less than confirmationCountMin', () => {
           it('returns false', async () => {
             const result = await fact.value({
               series1: [1, 1, 2, 4, 6],
@@ -193,7 +193,7 @@ describe('Fact ta.crossUp', () => {
           })
         })
 
-        describe('and amount of values after (and including) cross over is greater than or equal to confirmationCountMin', () => {
+        describe('and amount of values after cross over is greater than or equal to confirmationCountMin', () => {
           it('returns true', async () => {
             const result = await fact.value({
               series1: [1, 1, 2, 4, 6],
@@ -219,11 +219,11 @@ describe('Fact ta.crossUp', () => {
           })
         })
 
-        describe('and amount of values after (and including) cross over is greater than confirmationCountMax', () => {
+        describe('and amount of values after cross over is greater than confirmationCountMax', () => {
           it('returns false', async () => {
             const result = await fact.value({
-              series1: [1, 1, 2, 4, 6],
-              series2: [1, 1, 2, 3, 4],
+              series1: [1, 1, 2, 4, 6, 7],
+              series2: [1, 1, 2, 3, 4, 5],
               confirmationCountMax: 1
             })
 
@@ -231,12 +231,12 @@ describe('Fact ta.crossUp', () => {
           })
         })
 
-        describe('and amount of values after (and including) cross over is less than or equal to confirmationCountMax', () => {
+        describe('and amount of values after cross over is less than or equal to confirmationCountMax', () => {
           it('returns true', async () => {
             const result = await fact.value({
               series1: [1, 1, 2, 4, 6],
               series2: [1, 1, 2, 3, 4],
-              confirmationCountMin: 2
+              confirmationCountMax: 2
             })
 
             expect(result).to.eql(true)
